@@ -1,0 +1,23 @@
+<h1>Listing extras</h1>
+
+<table>
+  <tr>
+    <th>Stuff</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @extras.each do |extra| %>
+  <tr>
+    <td><%= extra.stuff %></td>
+    <td><%= link_to 'Show', extra %></td>
+    <td><%= link_to 'Edit', edit_extra_path(extra) %></td>
+    <td><%= link_to 'Destroy', extra, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Extra', new_extra_path %>
